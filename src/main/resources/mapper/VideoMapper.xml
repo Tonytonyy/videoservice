@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.videoservice.dao.VideoDao">
+
+	<select id="findVideosbySelf" parameterType="java.lang.Long" resultType="com.videoservice.pojo.Video">
+		select * from video
+			where 1=1
+				<if test="id != null and id != ''">
+					and id = #{id}
+				</if>
+	</select>
+	<select id="listVideosByType" parameterType="java.lang.String" resultType="com.videoservice.pojo.Video">
+		select * from video
+		where 1=1
+		<if test="type != null and type != ''">
+			and type = #{type}
+		</if>
+	</select>
+
+	<insert id="insertVideo"  parameterType="com.videoservice.pojo.Video" useGeneratedKeys="true" keyProperty="id">
+		insert into video
+		 (user_id, videoName, createTime, modifyTime, isdeleted, seeUsers, pptID, type, content, userName)
+		 VALUES
+		(#{userId},#{videoName},#{createTime},#{modifyTime},#{seeUsers},#{pptID},#{type},#{content},#{userName})
+	</insert>
+</mapper>
