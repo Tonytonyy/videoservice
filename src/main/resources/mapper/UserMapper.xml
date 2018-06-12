@@ -2,12 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.videoservice.dao.UserDao">
 
-
-	<parameterMap id="City" type="com.videoservice.pojo.User"/>
-
-	<sql id="Base_Column_List">
-		id, province_id, city_name, description
-	</sql>
 	<select id="findUserbyName" parameterType="java.lang.String" resultType="com.videoservice.pojo.User">
 		select * from user
 		 where userName = #{userName}
