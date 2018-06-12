@@ -37,8 +37,7 @@ public class ConmmentController {
     public @ResponseBody String saveUser(){
         User user = new User();
         user.setScore(20.0);
-        user.setCreateTime(new Date());
-        user.setModifyTime(new Date());
+
 
         System.out.println(user);
         Long num = userDao.insertUser(user);

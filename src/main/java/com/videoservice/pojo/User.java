@@ -1,13 +1,14 @@
 package com.videoservice.pojo;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class User {
     private long id;
     private String userName;
     private Double score;
-    private Date createTime;
-    private Date modifyTime;
+    private LocalDate createTime;
+    private LocalDate modifyTime;
 
     public long getId() {
         return id;
@@ -33,19 +34,19 @@ public class User {
         this.score = score;
     }
 
-    public Date getCreateTime() {
+    public LocalDate getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(LocalDate createTime) {
         this.createTime = createTime;
     }
 
-    public Date getModifyTime() {
+    public LocalDate getModifyTime() {
         return modifyTime;
     }
 
-    public void setModifyTime(Date modifyTime) {
+    public void setModifyTime(LocalDate modifyTime) {
         this.modifyTime = modifyTime;
     }
 

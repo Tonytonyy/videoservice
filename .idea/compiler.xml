@@ -9,8 +9,8 @@
         <module name="videoservice" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="videoservice" target="1.6" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="videoservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
